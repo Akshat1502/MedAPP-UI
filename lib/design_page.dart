@@ -25,11 +25,13 @@ class _NewDesignState extends State<NewDesign> {
     return   Scaffold(
       appBar: AppBar(title: Text('MedApp')),
         body: Container(
-          color: Colors.purple[700],
+          color: Colors.deepPurple[600],
           child: Stack(
             
             children: [
-              Image.asset('assets/images/doctor.png',height: 470,width: 380,alignment: Alignment.center,),
+              Positioned(child: Image.asset('assets/images/doctor.png',height: 470,width: 380,alignment: Alignment.center,),
+              left: 5,
+              top: 7,),
               
               Align(
                 alignment: Alignment.bottomCenter,
@@ -82,9 +84,9 @@ class _NewDesignState extends State<NewDesign> {
                  padding: const EdgeInsets.all(16),
                  child: SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(onPressed:() {},style: ElevatedButton.styleFrom(shape: StadiumBorder(),backgroundColor: Colors.amberAccent), child: Padding(
+                  child: ElevatedButton(onPressed:() {},style: ElevatedButton.styleFrom(shape: StadiumBorder(),backgroundColor: Colors.black), child: Padding(
                     padding: const EdgeInsets.all(16),
-                    child: const Text("LET'S GET STARTED",style: TextStyle(color: Colors.deepPurpleAccent,fontSize: 20,fontWeight: FontWeight.bold,),),
+                    child: const Text("LET'S GET STARTED",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold,),),
                   ),)),
                ),
 
