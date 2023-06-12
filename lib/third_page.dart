@@ -137,7 +137,7 @@ class ThirdPage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 20,),
+            const SizedBox(height: 10,),
              Padding(
               padding: const EdgeInsets.only(left: 18,),
               child: const Text('Location',style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold,),),
