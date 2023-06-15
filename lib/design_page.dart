@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:medapp/Second_page.dart';
+import 'package:medapp/routes.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class NewDesign extends StatefulWidget {
@@ -84,7 +86,9 @@ class _NewDesignState extends State<NewDesign> {
                  padding: const EdgeInsets.all(16),
                  child: SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(onPressed:() {},style: ElevatedButton.styleFrom(shape: StadiumBorder(),backgroundColor: Colors.black), child: Padding(
+                  child: ElevatedButton(onPressed:() {
+                    Navigator.of(context).pushNamedAndRemoveUntil(userspaceRoute, (route) => false);
+                  },style: ElevatedButton.styleFrom(shape: StadiumBorder(),backgroundColor: Colors.black), child: Padding(
                     padding: const EdgeInsets.all(16),
                     child: const Text("LET'S GET STARTED",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.bold,),),
                   ),)),

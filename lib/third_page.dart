@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:medapp/routes.dart';
 import 'package:readmore/readmore.dart';
 import 'package:date_picker_timeline/date_picker_timeline.dart';
 
@@ -16,9 +17,14 @@ class ThirdPage extends StatelessWidget {
         backgroundColor: Colors.deepPurple,
         leading:  Padding(
           padding: const EdgeInsets.all(5.0),
-          child: Container(decoration:BoxDecoration(color: Colors.white10,borderRadius: BorderRadius.all(Radius.circular(10)),
-          ) ,
-          child: ClipRRect(borderRadius: BorderRadius.all(Radius.circular(5)),child: Icon(Ionicons.arrow_back,color: Colors.white,))),
+          child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).pushNamedAndRemoveUntil(userspaceRoute, (route) => false);
+            },
+            child: Container(decoration:BoxDecoration(color: Colors.white10,borderRadius: BorderRadius.all(Radius.circular(10)),
+            ) ,
+            child: ClipRRect(borderRadius: BorderRadius.all(Radius.circular(5)),child: Icon(Ionicons.arrow_back,color: Colors.white,))),
+          ),
         ),
         title: Row(
           children: [
